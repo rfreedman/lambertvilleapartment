@@ -9,39 +9,58 @@
 body {
     margin:auto;
     padding:10;
-    background: #F6F0E0;
+    //background: #F6F0E0;
+	background: #4a5797;
 	font-family: Verdana, Geneva, sans-serif;
 	width:1300px;				
 }
 
-#wrapper, #header { 
+#wrapper, #header, #nav, #footer { 
  margin: 0 auto;
  width: 1022px;
 }
 
+#nav {
+	margin-top: 10px;
+}
 #header {
 	color: #333;
-	background:#F6F0E0;
-	margin-top: 10px;
+	background: #f1f1f3;
+	text-align:center;	
+}
+
+#header {
+	//margin-top: 10px;
 	font-size:40px;
+}
+
+#footer {
+	margin-bottom:10px;
+	font-size:12px; 
+}
+
+#nav, #footer {
+	color: #333;
+	background: #ddd;
 	text-align:center;	
 }
 
 #leftcolumn { 
  color: #000;
  border: 1px solid #F6F0E0;
- background:#F6F0E0;
+ background: #f1f1f3;
  margin: 0px 0px 10px 0px;
  padding: 10px;
  height: 900px;
  width:250px;
  float: left;
 }
+
 #rightcolumn { 
  float: right;
  color: #333;
  border: 1px solid #F6F0E0;
- background:#F6F0E0;
+ background: #f1f1f3;
  margin: 0px 0px 10px 0px;
  padding: 10px;
  height: 900px;
@@ -58,6 +77,8 @@ li {margin-bottom:10px;}
 </style>
 </head>
 <body>
+
+<div id="nav"><a href="index.html">Home</a> | <a href="photos.html">Photos</a></div>
 <div id="header">Lambertville, NJ Apartment For Rent</div>
 <div id="wrapper">
   <div id="leftcolumn"> 
@@ -86,6 +107,9 @@ li {margin-bottom:10px;}
 		<img src="images/DSC_3569.jpg">
 		<img src="images/DSC_3578.jpg">
   	</div>
+ </div>
+ <div id="footer">
+ 	<a href="index.html">Home</a> | <a href="photos.html">Photos</a>
  </div>
 </div>
 
