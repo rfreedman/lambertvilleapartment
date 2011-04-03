@@ -1,5 +1,3 @@
- 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -15,7 +13,7 @@ body {
 	width:1300px;				
 }
 
-#wrapper, #header, #nav, #footer { 
+#outer, #wrapper, #header, p.subheader, #gallery-wrapper, #nav, #footer { 
  margin: 0 auto;
  width: 1022px;
 }
@@ -23,6 +21,7 @@ body {
 #nav {
 	margin-top: 10px;
 }
+
 #header {
 	color: #333;
 	background: #f1f1f3;
@@ -30,8 +29,12 @@ body {
 }
 
 #header {
-	//margin-top: 10px;
+	margin-top: 10px;
 	font-size:40px;
+}
+
+p.subheader {
+ text-align:center;	
 }
 
 #footer {
@@ -45,14 +48,23 @@ body {
 	text-align:center;	
 }
 
+#outer {
+ background: #f1f1f3;
+}
+
+#gallery-wrapper {
+ color: #000;
+ background: #f1f1f3;
+}
+
 #leftcolumn { 
  color: #000;
  border: 1px solid #F6F0E0;
  background: #f1f1f3;
  margin: 0px 0px 10px 0px;
  padding: 10px;
- height: 900px;
- width:250px;
+ height: 160px;
+ width:489px;
  float: left;
 }
 
@@ -63,55 +75,82 @@ body {
  background: #f1f1f3;
  margin: 0px 0px 10px 0px;
  padding: 10px;
- height: 900px;
- width:728px;
+ height: 160px;
+ width:489px;
  display: inline;
  position: relative;
 }
 
 #images {
 	margin-left:20px;
+	margin-top:80px;
 }
 
 li {margin-bottom:10px;}
 </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="galleria/galleria-1.2.2.min.js"></script>
 </head>
 <body>
-
-<div id="nav"><a href="index.html">Home</a> | <a href="photos.html">Photos</a></div>
+<div id="outer">
+<div id="nav">&nbsp;</div>
 <div id="header">Lambertville, NJ Apartment For Rent</div>
+
 <div id="wrapper">
-  <div id="leftcolumn"> 
-		<p class="subheader">Beautiful, Spacious Apartment in Lambertville, NJ</p>
-		<p class="subheader">Condo-like living without the maintenance Fees!</p>
-		This newly renovated apartment has it all:
+	<p class="subheader">Beautiful, Spacious Apartment in Lambertville, NJ</p>
+	<p class="subheader" style="font-style:italic;margin-top:10px;">Condo-like Living Without the Maintenance Fees!</p>
+	
+	<div id="gallery-wrapper">
+	<div id="gallery"  style="margin-left:30px;margin-top:20px;">
+			<img src="images/DSC_3587.jpg"/>
+	      	<img src="images/DSC_3574.jpg"/>
+			<img src="images/DSC_3553.jpg"/>	
+			<img src="images/DSC_3552.jpg"/>
+			<img src="images/DSC_3597.jpg"/>
+			<img src="images/DSC_3591.jpg"/>
+			<img src="images/DSC_3551.jpg"/>
+			<img src="images/DSC_3608-cropped.JPG"/>
+			<img src="images/TobertsRoom-asmall.jpg">
+			<img src="images/bathroomSuite.jpg">
+			<img src="images/MyrasSuite-esmall.jpg">
+			<img src="images/MyrasSuite-f.jpg">
+	  </div>
+	 </div>
+	<p class="subheader" style="margin-top:20px;">This newly renovated apartment has it all:</p>
+	  <div id="leftcolumn"> 
 
 		<ul>
 		<li>2 large bedrooms (including a two-room suite)<br/>with fireplaces and modern attached baths</li>
 		<li>Den / Office with fireplace and attached bath</li>
-		<li>New, High-End, Eat-in Kitchen - perfect for the gourmet cook</li>
 		<li>Formal Dining Room</li>
+		<li>New, High-End, Eat-in Kitchen - perfect for the gourmet cook</li>
+		</ul>
+		
+  </div>
+  
+  <div id="rightcolumn">
+		<ul>
 		<li>Large Living Room with fireplace</li>
 		<li>Approx. 2,000 square feet of living space</li> 
 		<li>Porch</li>
 		<li>2 Off-Street Parking Spaces</li>
 		</ul>
-		
-		<p>
-		Available now - call Mary at 609-309-2350 for more information.	
-		</p> 
   </div>
-  
-  <div id="rightcolumn">
-	<div id="images">
-		<img src="images/DSC_3569.jpg">
-		<img src="images/DSC_3578.jpg">
-  	</div>
- </div>
+	<p class="subheader" style="margin-bottom:20px;">
+	Available now - call Mary at 609-309-2350 for more information.	
+	</p> 
+
  <div id="footer">
- 	<a href="index.html">Home</a> | <a href="photos.html">Photos</a>
+	&nbsp;
  </div>
 </div>
-
+<div>
+<script>
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    $("#gallery").galleria({
+        width: 960,
+        height: 638
+    });
+</script>
 </body>
 </html>
